@@ -1,0 +1,26 @@
+$container_max_width := 1440px
+$container_fixed_padding := 12px
+
+$section_padding := 20px
+
+.container
+   @media $tablet
+      margin: 0 auto
+      width: 90%
+   @media $desktop
+      width: 85%
+   @media $large_desktop
+      max-width: $container_max_width
+      width: 80%
+
+.container-fixed
+   padding-left: $container_fixed_padding
+   padding-right: $container_fixed_padding
+
+.padded
+   padding: 12px
+
+
+section
+   padding-top: $section_padding
+   padding-bottom: $section_padding

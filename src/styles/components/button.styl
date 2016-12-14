@@ -1,0 +1,22 @@
+.btn
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   padding: 10px 20px
+   margin: 10px
+   cursor: pointer
+   white-space: nowrap
+   text-transform: capitalize
+   font-weight: bold
+   border-radius: 3px
+   @extend .click-effect
+
+
+{join(', .btn.', $colors)}
+   color: $shades.white
+
+// for name, color in $colors
+//    .btn.{name}, .btn.{name}-o
+//       border-color: color
+//    .btn.{name}-o
+//       @extend .{name}-text

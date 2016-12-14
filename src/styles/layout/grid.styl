@@ -1,0 +1,20 @@
+$grid_gutter := 8px
+$grid_padding := 12px
+
+.row
+   display: flex
+   flex-flow: row wrap
+
+.col
+   flex: 1
+   flex-basis: 100%
+
+   @media $tablet
+      flex-basis: 50%
+
+   @media $desktop
+      flex-basis: 10%
+
+// TODO:
+// s6, m6, l6 ??
+// remove nested padding div

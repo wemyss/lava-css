@@ -1,0 +1,37 @@
+$nav_height := 48px
+$nav_height_desktop := 56px
+
+$nav_item_padding := 12px
+
+.nav
+   display: flex
+   height: $nav_height
+
+   @media $desktop
+      height: $nav_height_desktop
+
+
+.nav-item,
+.nav-left
+   display: inline-flex
+   height: 100%
+   align-items: center
+
+.nav-item
+   user-select: none
+   justify-content: center
+   padding-left: $nav_item_padding
+   padding-right: $nav_item_padding
+
+   &:hover
+      background-color: rgba(255,255,255,.1)
+
+a.nav-item
+   &:active
+      background-color: rgba(255,255,255,.2)
+
+.nav-left
+   flex: 1
+
+.nav-logo
+   max-height: 80%

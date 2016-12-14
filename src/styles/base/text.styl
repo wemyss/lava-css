@@ -1,0 +1,25 @@
+$title_weight := 300
+$subtitle_weight := 200
+$title_color := #111
+
+
+// create sizes
+
+.title
+   font-weight: $title_weight
+   color: $title_color
+
+.subtitle
+   font-weight: $subtitle_weight
+   color: lighten($title_color, 15%)
+
+
+for num in 1..6
+   .title.is-{num}
+      font-size: 48px - ((num - 1) * 6px)
+
+   .subtitle.is-{num}
+      font-size: 34px - ((num - 1) * 4px)
+p
+   margin-top: 0.7rem
+   margin-bottom: 0.3rem

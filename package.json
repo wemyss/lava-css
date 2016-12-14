@@ -1,0 +1,35 @@
+{
+  "name": "lava-css",
+  "version": "1.0.0",
+  "description": "Simple, modern and customizable css framework written with Stylus",
+  "main": "",
+  "scripts": {
+    "clean": "rm -rf dist/ && mkdir dist/",
+    "build-css": "stylus -o dist -I src src/index.styl",
+    "build-docs": "pug docs/[a-zA-Z]*.pug -o dist",
+    "build": "npm run clean && run-p -s build-*",
+    "prestart": "npm run clean",
+    "start": "run-p -s watch-* start-server",
+    "start-server": "browser-sync start --server 'dist' --files 'dist'",
+    "watch-css": "npm run build-css -- -w",
+    "watch-docs": "npm run build-docs -- -wP"
+  },
+  "keywords": [
+    "css",
+    "stylus",
+    "modern",
+    "modular",
+    "npm scripts",
+    "pug",
+    "responsive",
+    "framework"
+  ],
+  "author": "Sam Wemyss",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "npm-run-all": "^3.1.2",
+    "pug-cli": "latest",
+    "stylus": "latest"
+  }
+}

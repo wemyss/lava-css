@@ -1,0 +1,53 @@
+extends _layout.pug
+
+block content
+   section.container
+      .row
+         .col
+            each val in [1,2,3,4,5,6]
+               h2(class="title is-" + val)= author
+         .col
+            each val in [1,2,3,4,5,6]
+               h2(class="subtitle is-" + val)= author
+   section.container
+      .row.white-text.center-text
+         each val in [1,2,3]
+            .col.red
+               .padded 1
+            .col.green
+               .padded 2
+            .col.blue
+               .padded 3
+            .col.yellow
+               .padded 4
+            .col.orange
+               .padded 5
+            .col.midnight
+               .padded 6
+   section.container
+      a.btn.red button
+      a.btn.green button
+      a.btn.blue button
+      a.btn.yellow button
+      a.btn.purple button
+      a.btn.orange button
+      a.btn.midnight button
+      //- a.btn button
+      //- a.btn.red-o button
+      //- a.btn.green-o button
+      //- a.btn.blue-o button
+      //- a.btn.yellow-o button
+      //- a.btn.purple-o button
+      //- a.btn.orange-o button
+      //- a.btn.midnight-o button
+   section.container
+      .card
+         .card-media
+            img(src="http://d2ouvy59p0dg6k.cloudfront.net/img/original/web_54146_1.jpg")
+         .card-content
+            h3.card-title Snow Leopard
+            p Lorem ipsum snow leopards are commonly found in mountainous areas hunting animals. They are rarely seen by humans
+      .card
+         .card-media
+            img(src="http://images.pushsquare.com/news/2016/06/there_are_some_interesting_the_last_of_us_2_theories_flying_around/attachment/0/original.jpg")
+            h3.card-title THE LAST OF US
