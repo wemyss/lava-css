@@ -41,13 +41,18 @@ block content
       //- a.btn.orange-o button
       //- a.btn.midnight-o button
    section.container
-      .card
-         .card-media
-            img(src="http://d2ouvy59p0dg6k.cloudfront.net/img/original/web_54146_1.jpg")
-         .card-content
-            h3.card-title Snow Leopard
-            p Lorem ipsum snow leopards are commonly found in mountainous areas hunting animals. They are rarely seen by humans
-      .card
-         .card-media
-            img(src="http://images.pushsquare.com/news/2016/06/there_are_some_interesting_the_last_of_us_2_theories_flying_around/attachment/0/original.jpg")
-            h3.card-title THE LAST OF US
+      .row
+         .col
+            .card
+               .card-media
+                  img(src="http://d2ouvy59p0dg6k.cloudfront.net/img/original/web_54146_1.jpg")
+               .card-content
+                  h3.card-title Snow Leopard
+                  p Lorem ipsum snow leopards are commonly found in mountainous areas hunting animals. They are rarely seen by humans
+         .col
+            .card
+               .card-media
+                  img(src="http://images.pushsquare.com/news/2016/06/there_are_some_interesting_the_last_of_us_2_theories_flying_around/attachment/0/original.jpg")
+                  h3.card-title THE LAST OF US
+   section.container
+      include imports/spinner.pug

@@ -7,7 +7,10 @@
     "clean": "rm -rf dist/ && mkdir dist/",
     "build-css": "stylus -o dist -I src src/index.styl",
     "build-docs": "pug docs/[a-zA-Z]*.pug -o dist",
-    "build": "npm run clean && run-p -s build-*",
+    "build": "npm run clean && run-p -s build-css build-docs",
+    "build-prod": "npm run build && run-p minify-*",
+    "minify-css": "postcss --use autoprefixer -b 'last 2 versions' -o dist/index.css dist/index.css && cssnano dist/index.css dist/index.css",
+    "minify-docs": "html-minifier --input-dir dist/ --output-dir dist/ --minify-ur-ls --remove-comments --use-short-doctype",
     "prestart": "npm run clean",
     "start": "run-p -s watch-* start-server",
     "start-server": "browser-sync start --server 'dist' --files 'dist'",
@@ -27,8 +30,11 @@
   "author": "Sam Wemyss",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.5",
+    "autoprefixer": "^6.5.4",
+    "browser-sync": "latest",
+    "cssnano-cli": "^1.0.5",
     "npm-run-all": "^3.1.2",
+    "postcss-cli": "^2.6.0",
     "pug-cli": "latest",
     "stylus": "latest"
   }
